@@ -30,15 +30,15 @@ CLANG_REVISION = sys.argv[2] or os.popen(CLANG_UPDATE_PY +
 CLANG_BUCKET = 'gs://chromium-browser-clang/Linux_x64'
 
 def main():
-  targz_name = 'llvmgold-%s.tgz' % CLANG_REVISION
-  remote_path = '%s/%s' % (CLANG_BUCKET, targz_name)
-
-  os.chdir(LLVM_BUILD_PATH)
-
-  subprocess.check_call(['python', GSUTIL_PATH,
-                         'cp', remote_path, targz_name])
-  subprocess.check_call(['tar', 'xzf', targz_name])
-  os.remove(targz_name)
+  #targz_name = 'llvmgold-%s.tgz' % CLANG_REVISION
+  #remote_path = '%s/%s' % (CLANG_BUCKET, targz_name)
+  #
+  #os.chdir(LLVM_BUILD_PATH)
+  #
+  #subprocess.check_call(['python', GSUTIL_PATH,
+  #                       'cp', remote_path, targz_name])
+  #subprocess.check_call(['tar', 'xzf', targz_name])
+  #os.remove(targz_name)
   return 0
 
 if __name__ == '__main__':
